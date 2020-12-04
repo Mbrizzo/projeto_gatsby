@@ -21,7 +21,7 @@ export const PostItemWrapper = styled.section`
 
 export const PostItemTag = styled.div`
   align-items: center;
-  background: tomato;
+  background: ${props => (props.background ? props.background : "#1fa1f2")};
   border-radius: 50%;
   color: #fff;
   display: flex;
