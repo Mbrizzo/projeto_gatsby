@@ -3,7 +3,7 @@ date: 2020-12-04 18:15:00
 title: Text Gradients
 description: How to create text gradients in CSS.
 category: CSS
-background: "7AAB13"
+background: "#7AAB13"
 ---
 
 # Lorem ipsum
