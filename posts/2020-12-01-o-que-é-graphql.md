@@ -2,7 +2,7 @@
 date: 2020-12-08 18:15:00
 title: O que é o GraphQL
 description: Conheça uma das formas mais modernas de construir e consultar APIs.
-category: GRAPHQL
+category: API
 background: "#C71585"
 ---
 
