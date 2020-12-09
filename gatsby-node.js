@@ -1,12 +1,12 @@
 const path = require("path")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-//to add the sglug field to each post
+// Adiciona o campo slug para cada postagem
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
-  // Ensures we are processing only markdown files
+  // Garante que estamos processando apenas markdown files
   if (node.internal.type === "MarkdownRemark") {
-    // Use `createFilePath` to turn markdown files in our `data/faqs` directory into `/faqs/slug`
+    // Use `createFilePath` transforma arquivos de marcação `data/faqs` directory into `/faqs/slug`
     const slug = createFilePath({
       node,
       getNode,
@@ -22,9 +22,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
+// To create the posts pages
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-
   return graphql(`
     {
       allMarkdownRemark {
@@ -37,12 +37,14 @@ exports.createPages = ({ graphql, actions }) => {
         }
       }
     }
-  `).the(result => {
+  `).then(result => {
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
         path: node.fields.slug,
-        component: path.resolve("./src/templates/blog-post.js"),
+        component: path.resolve(`./src/templates/blog-post.js`),
         context: {
+          // os dados passados para o contexto estão disponíveis.
+          // em consultas de página como variáveis ​​GraphQL.
           slug: node.fields.slug,
         },
       })

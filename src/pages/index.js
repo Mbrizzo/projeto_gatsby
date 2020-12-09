@@ -6,29 +6,27 @@ import SEO from "../components/seo"
 import PostItem from "../components/PostItem"
 
 const IndexPage = () => {
-  const { allMarkdownRemark } = useStaticQuery(
-    graphql`
-      query PostList {
-        allMarkdownRemark {
-          edges {
-            node {
-              fields {
-                slug
-              }
-              frontmatter {
-                background
-                category
-                date
-                description
-                title
-              }
-              timeToRead
+  const { allMarkdownRemark } = useStaticQuery(graphql`
+    query PostList {
+      allMarkdownRemark {
+        edges {
+          node {
+            fields {
+              slug
             }
+            frontmatter {
+              background
+              category
+              date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+              description
+              title
+            }
+            timeToRead
           }
         }
       }
-    `
-  )
+    }
+  `)
 
   const postList = allMarkdownRemark.edges
 
@@ -57,5 +55,4 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
 export default IndexPage
