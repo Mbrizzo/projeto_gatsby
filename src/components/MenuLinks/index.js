@@ -11,7 +11,7 @@ const MenuLinks = () => (
           <S.MenuLinksLink
             cover
             direction="left"
-            bg="#16202c"
+            bg="#102027"
             duration={0.6}
             to={link.url}
           >
