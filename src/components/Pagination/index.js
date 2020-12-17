@@ -35,7 +35,7 @@ const Pagination = ({
         bg="#102027"
         duration={0.6}
       >
-        Próxima Página
+        Próxima Página →
       </AniLink>
     )}
   </S.PaginationWrapper>
@@ -46,8 +46,8 @@ Pagination.propTypes = {
   isLast: propTypes.bool.isRequired,
   currentPage: propTypes.number.isRequired,
   numPages: propTypes.number.isRequired,
-  prevPages: propTypes.string,
-  nextPages: propTypes.string,
+  prevPage: propTypes.string,
+  nextPage: propTypes.string,
 }
 
 export default Pagination
