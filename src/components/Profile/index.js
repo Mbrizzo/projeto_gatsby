@@ -27,7 +27,7 @@ const Profile = () => (
           to="/"
           cover
           direction="left"
-          bg="#102027"
+          bg="var(--background)"
           duration={0.6}
         >
           <Avatar />

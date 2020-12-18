@@ -60,5 +60,27 @@ img {
   width: 100%;
   height: auto;
 }
+
+body.dark {
+	--borders: #384446;
+	--texts: #8899a6;
+	--postColor: #fff;
+	--higlight: #1fa1f2;
+	--mediumBackground: #192734;
+	--background: #102027;
+	--white: #fff;
+	--black: #222;
+}
+
+body.light {
+	--borders: #dedede;
+	--texts: #555555;
+	--postColor: #111;
+	--higlight: #1fa1f2;
+	--mediumBackground: #f0f0f3;
+	--background: #fff;
+	--white: #fff;
+	--black: #222;
+}
 `
 export default GlobalStyles
