@@ -50,7 +50,7 @@ table {
 	border-spacing: 0;
 }
 body {
-  background: #353535;
+  background: #102027;
   line-height: 1;
   font-size: 100%;
   font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -77,7 +77,7 @@ body.light {
 	--texts: #555555;
 	--postColor: #111;
 	--higlight: #1fa1f2;
-	--mediumBackground: #f0f0f3;
+	--mediumBackground: #eceff1;
 	--background: #fff;
 	--white: #fff;
 	--black: #222;
