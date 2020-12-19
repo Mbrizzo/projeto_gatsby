@@ -4,6 +4,7 @@ title: Arara Azul
 description: criando uma arara azul no css.
 category: CSS
 background: "#7AAB13"
+image: "/assets/img/aquario.jpg"
 ---
 
 # Lorem ipsum
