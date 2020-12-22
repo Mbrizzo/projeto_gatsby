@@ -59,7 +59,13 @@ export const MenuBarItem = styled.span`
     color: #d4d400;
 
     &:hover {
-      color: #e2e240;
+      color: #fdd835;
+    }
+  }
+
+  &.dark {
+    &:hover {
+      color: #fdd835;
     }
   }
 
@@ -78,9 +84,9 @@ export const MenuBarItem = styled.span`
     }
   `}
   ${media.lessThan("large")`
-    height: 3.2rem;
+    height: 2rem;
     padding: .9rem;
     position: relative;
-    width: 3.2rem;
+    width: 2rem;
   `}
 `

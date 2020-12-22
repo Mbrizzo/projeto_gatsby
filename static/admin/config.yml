@@ -1,0 +1,50 @@
+backend:
+  name: github
+  repo: Mbrizzo/projeto_gatsby
+  branch: main # Branch to update (optional; defaults to master)
+  site_domain: https://projeto-gatsby.mrizzo.vercel.app/
+
+publish_mode: editorial_workflow
+media_folder: "static/assets/img" # Media files will be stored in the repo under images/uploadss
+puplic_folder: "assets/img"
+
+collections:
+  - name: "posts" # Used in routes, e.g., /admin/collections/blog
+    label: "Posts" # Used in the UI
+    folder: "posts" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD hh:mm:ss",
+        }
+      - { label: "image", name: "thumbnail", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options:
+            ["security", "css", "js", "html", "svg", "dev", "misc", "linux"],
+        }
+      - {
+          label: "Background",
+          name: "background",
+          widget: "select",
+          options:
+            [
+              { label: "Security", value: "#B31917" },
+              { label: "CSS", value: "#6a1b9a" },
+              { label: "JS", value: "#D6BA32" },
+              { label: "HTML", value: "#EB7728" },
+              { label: "SVG", value: "#7D669E" },
+              { label: "Dev", value: "#80deea" },
+              { label: "Misc", value: "#7AAB13" },
+              { label: "Linux", value: "#76ff03" },
+            ],
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
